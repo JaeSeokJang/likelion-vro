@@ -284,10 +284,10 @@ form.example::after {
                     <button class="accordion" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample"><a href="#a"><strong>CATEGORY</strong></a></button>
                         <div class="collapse" id="collapseExample2">
                             <div class="card card-body"><a href="{% url 'OUTER' %}">OUTER</a></div>
-                            <div class="card card-body"><a href="#">TOP</a></div>
-                            <div class="card card-body"><a href="#">BOTTOM</a></div>
-                            <div class="card card-body"><a href="#">SHOES</a></div>
-                            <div class="card card-body"><a href="#">ACC</a></div>
+                            <div class="card card-body"><a href="{% url 'top' %}">TOP</a></div>
+                            <div class="card card-body"><a href="{% url 'BOTTOM' %}">BOTTOM</a></div>
+                            <div class="card card-body"><a href="{% url 'SHOES' %}">SHOES</a></div>
+                            <div class="card card-body"><a href="{% url 'ACC' %}">ACC</a></div>
                         </div>
                     <button class="accordion" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample"><a href="#a"><strong>COMMUNITY</strong></a></button>
                         <div class="collapse" id="collapseExample3">

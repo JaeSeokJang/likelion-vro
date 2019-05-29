@@ -22,6 +22,14 @@ def notice(request):
     return render(request, 'homepage/notice.html', {'notices':notices})
 def OUTER(request):
     return render(request, 'homepage/OUTER.html')
+def SHOES(request):
+    return render(request, 'homepage/SHOES.html')
+def BOTTOM(request):
+    return render(request, 'homepage/BOTTOM.html')
+def top(request):
+    return render(request, 'homepage/top.html')
+def ACC(request):
+    return render(request, 'homepage/ACC.html')
 
 def login(request):
     if request.method == 'POST':

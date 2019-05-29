@@ -28,4 +28,8 @@ urlpatterns = [
     path('login/', homepage.views.login, name='login'),
     path('logout/', homepage.views.logout, name='logout'),
     path('OUTER/', homepage.views.OUTER, name='OUTER'),
+    path('SHOES/', homepage.views.SHOES, name='SHOES'),
+    path('BOTTOM/', homepage.views.BOTTOM, name='BOTTOM'),
+    path('ACC/', homepage.views.ACC, name='ACC'),
+    path('top/', homepage.views.top, name='top'),
 ]
