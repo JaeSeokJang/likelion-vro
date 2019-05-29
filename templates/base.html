@@ -183,13 +183,13 @@ form.example::after {
                         <form action="{% url 'login' %}" class="loginform" method="POST">
                             <br>
                             {% csrf_token %}
-                            ID <input name = "username" type="text" value="" style="float: right;"  >
+                            ID <input name = "username" type="text" value="" style="float: right;">
                             <br>
                             <br>
-                            PASSWORD <input name = "password" type="password" value="" style="float: right;" >
+                            PASSWORD <input name = "password" type="password" value="" style="float: right;">
                             <br>
                             <br>
-                            <button type="submit" class="btn original-btn">Log in</button>
+                            <button type="submit" class="btn original-btn" style="background-color: white;">Log in</button>
                         </form>
                     </div>
                 </div>
@@ -219,7 +219,7 @@ form.example::after {
                             <input name="password2" type="password" value="" style="float: right;">
                             <br>
                             <br>
-                            <button type="submit" class="btn original-btn">sign up</button>
+                            <button type="submit" class="btn original-btn" style="background-color: white;">sign up</button>
                         </form>
                     </div>
                 </div>
@@ -283,7 +283,7 @@ form.example::after {
                         </div>
                     <button class="accordion" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample"><a href="#a"><strong>CATEGORY</strong></a></button>
                         <div class="collapse" id="collapseExample2">
-                            <div class="card card-body"><a href="#">OUTER</a></div>
+                            <div class="card card-body"><a href="{% url 'OUTER' %}">OUTER</a></div>
                             <div class="card card-body"><a href="#">TOP</a></div>
                             <div class="card card-body"><a href="#">BOTTOM</a></div>
                             <div class="card card-body"><a href="#">SHOES</a></div>

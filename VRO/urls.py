@@ -27,4 +27,5 @@ urlpatterns = [
     path('signup/', homepage.views.signup, name='signup'),
     path('login/', homepage.views.login, name='login'),
     path('logout/', homepage.views.logout, name='logout'),
+    path('OUTER/', homepage.views.OUTER, name='OUTER'),
 ]

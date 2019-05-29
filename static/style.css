@@ -439,8 +439,8 @@ img {
       .subscribe-newsletter-area .modal-content .modal-body .newsletterForm button[type="submit"] {
         background-color: #ffffff; }
         .subscribe-newsletter-area .modal-content .modal-body .newsletterForm button[type="submit"]:hover {
-          background-color: #30336b;
-          color: #ffffff; }
+          background-color: white;
+          color: black; }
 .subscribe-newsletter-area .close {
   position: absolute;
   top: -30px;
