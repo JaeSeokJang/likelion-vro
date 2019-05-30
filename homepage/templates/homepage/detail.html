@@ -5,28 +5,14 @@
 
     <!-- ##### Blog Wrapper Start ##### -->
     <div class="container jumbotron">
-        <h1>{{ blgh.title }}</h1>
-        <p>{{ blog.pub_date }}</p>
-        <p>{{ blog.body }}</p>
-        <a href="{% url 'home' %}">돌아가기</a>
+        <h1>{{ notice.title }}</h1>
+        <p>{{ notice.pub_date }}</p>
+        <p>{{ notice.body }}</p>
+        <a href="{% url 'notice' %}">돌아가기</a>
     </div>
     <!-- ##### Blog Wrapper End ##### -->
 
-    <div class = "containerm mt-5">
-        <a class="btn btn-dark" href = "{% url 'comment_new' notice.pk %}">댓글달기</button>
-           
-        <ul>
-                {%for comment in notice.comments.all %}
-                <li>   
-                        {{comment.text}}
-                        <small>by {{comment.author}}, {{comment.created_at}} <a class = "brn brn-outline-primary btn-sm" href="{% url 'comment_remove' comment.pk %}">삭제</a></small>
-                </li>
-                {% empty %}
-                <p>아직 작성된 댓글이 없습니다.</p>
-                {% endfor %}
-                
-        </ul>
-    </div>
+
 
     <!-- ##### Cool Facts Area Start ##### -->
     <div class="cool-facts-area section-padding-100-0 bg-img background-overlay" style="background-image: url(img/bg-img/b4.jpg);">

@@ -58,9 +58,9 @@ def logout(request):
     auth.logout(request)
     return redirect('home')
 
-def detail(request, blog_id):
-    blog_detail = get_object_or_404(Notice, pk=blog_id)
-    return render(request, 'homepage/detail.html', {'blog': blog_detail})
+def detail(request, notice_id):
+    notice_detail = get_object_or_404(Notice, pk=notice_id)
+    return render(request, 'homepage/detail.html', {'notice': notice_detail})
 
 def comment_new(request, pk):
     post = get_object_or_404(Notice, pk=pk)
@@ -94,8 +94,6 @@ def create(request):
     blog.title = request.GET['title']
     blog.body = request.GET['body']
     blog.pub_date = timezone.datetime.now()
-    blog.number3 = request.GET['number3']
-    blog.number2 = request.GET['number2']
     blog.save()
 
     return redirect('/blog/' + str(blog.id))
