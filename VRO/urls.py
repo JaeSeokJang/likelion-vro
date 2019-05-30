@@ -32,6 +32,7 @@ urlpatterns = [
     path('BOTTOM/', homepage.views.BOTTOM, name='BOTTOM'),
     path('ACC/', homepage.views.ACC, name='ACC'),
     path('top/', homepage.views.top, name='top'),
+<<<<<<< HEAD
     path('homepage/<int:blog_id>/detail', homepage.views.detail, name='detail'),
     path('homepage/<int:pk>/comment', homepage.views.comment_new, name="comment_new"),
     path('comment/<int:comment_id/remove', homepage.views.comment_remove, name="comment_remove"),
@@ -39,4 +40,6 @@ urlpatterns = [
     path('homepage/<int:blog_id>/detail2', homepage.views.detail2, name='detail2'),
     path('homepage/new/', homepage.views.new, name='new'),
     path('homepage/create/', homepage.views.create, name='create'),
+=======
+>>>>>>> 1753cef0e53719b5b738bef26e773237dbcb3cee
 ]

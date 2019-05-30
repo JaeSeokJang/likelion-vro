@@ -23,6 +23,7 @@ class Shop(models.Model):
 
     def __str__(self):
         return self.title
+<<<<<<< HEAD
 
 class Comment(models.Model):
     post = models.ForeignKey('homepage.Notice', related_name="comments", on_delete=models.CASCADE)
@@ -41,3 +42,5 @@ class Qna(models.Model):
 
     def summary(self):
         return self.body[:100]
+=======
+>>>>>>> 1753cef0e53719b5b738bef26e773237dbcb3cee
