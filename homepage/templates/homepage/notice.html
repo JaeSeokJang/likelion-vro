@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content%}
+
+    <div class="blog-wrapper section-padding-100 clearfix">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-12 col-lg-4">
+                    <div class="single-blog-area clearfix mb-100">
+                        <!-- Blog Content -->
+                        <div class="single-blog-content">
+                            <div class="line"></div>
+                            <h4><a href="#" class="post-headline">공지사항</a></h4>
+                                {% for blog in notices.all %}
+                                    <div class="container">
+                                        <p>{{ blog.title }}</p>
+                                        <p>{{ blog.pub_date }}</p>
+                                        <p>{{ blog.summary }}<a href="{% url 'detail' blog.id %}">...more</a></p>
+                                    </div>
+                                {% endfor %}
+                        </div>
+                   </div>
+              </div>
+         </div>
+    </div>
+    <!-- ##### Blog Wrapper End ##### -->
+
+{% endblock %}

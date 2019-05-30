@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <!-- ##### Blog Wrapper Start ##### -->
+    <div class="blog-wrapper section-padding-100 clearfix">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-12 col-lg-4">
+                    <div class="single-blog-area clearfix mb-100">
+                        <!-- Blog Content -->
+                        <div class="single-blog-content">
+                            <div class="line"></div>
+                                    <div class="container">
+                                        <p>{{ question.title }}</p>
+                                        <p>{{ question.pub_date }}</p>
+                                        <p>{{ question.body }}</p>
+                                        <p>{{ question.text }}</p>
+                                    </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
