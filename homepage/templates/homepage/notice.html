@@ -3,27 +3,39 @@
 
 {% block content%}
 
-    <div class="blog-wrapper section-padding-100 clearfix">
-        <div class="container">
-            <div class="row align-items-end">
-                <div class="col-12 col-lg-4">
-                    <div class="single-blog-area clearfix mb-100">
-                        <!-- Blog Content -->
-                        <div class="single-blog-content">
-                            <div class="line"></div>
-                            <h4><a href="#" class="post-headline">공지사항</a></h4>
-                                {% for blog in notices.all %}
-                                    <div class="container">
-                                        <p>{{ blog.title }}</p>
-                                        <p>{{ blog.pub_date }}</p>
-                                        <p>{{ blog.summary }}<a href="{% url 'detail' blog.id %}">...more</a></p>
-                                    </div>
-                                {% endfor %}
-                        </div>
-                   </div>
-              </div>
-         </div>
-    </div>
+
+        
+  
+        <div class="container" style="top: 15px;">
+                <table class="table table-striped">
+                        <h4><a href="#" class="post-headline" style="color: black; font-size: 30px">Notice</a></h4>
+                        <thead>
+                            <tr>
+                                
+                                <th>제목</th>
+                                <th>내용</th>
+                                <th>작성자</th>
+                                <th>날짜</th>
+                                
+                            </tr>
+                        </thead>
+                        {% for blog in notices.all %}
+                        <tbody>
+                            
+                            <tr>
+                                
+                                <td><p style="color: black; font-size:17px;">{{ blog.title }}</p></td>
+                                <td><p style="color: black; font-size:17px;">{{ blog.body }}</p></td>
+                                <td><p style="color: black; font-size:17px;">홍용기</p></td>
+                                <td><p style="color: black; font-size:17px; width: 197px;">{{ blog.pub_date }}</p></td>
+                                
+                            </tr>
+                        </tbody>
+                        {% endfor %}
+                    </table>
+
+
     <!-- ##### Blog Wrapper End ##### -->
 
 {% endblock %}
+

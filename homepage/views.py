@@ -94,5 +94,8 @@ def create(request):
     blog.title = request.GET['title']
     blog.body = request.GET['body']
     blog.pub_date = timezone.datetime.now()
+    blog.number3 = request.GET['number3']
+    blog.number2 = request.GET['number2']
     blog.save()
+
     return redirect('/blog/' + str(blog.id))
