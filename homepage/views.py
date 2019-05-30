@@ -82,9 +82,9 @@ def qna(request):
     questions = Qna.objects.all()
     return render(request, 'homepage/qna.html', {'questions':questions})
 
-def detail2(request, blog_id2):
-    blog_detail = get_object_or_404(Qna, pk=blog_id)
-    return render(request, 'homepage/detail2.html', {'blog': blog_detail})
+def detail2(request, qna_id2):
+    qna_detail = get_object_or_404(Qna, pk=qna_id)
+    return render(request, 'homepage/detail2.html', {'qna': qna_detail})
 
 def new(request):
     return render(request, 'homepage/new.html')
@@ -96,4 +96,4 @@ def create(request):
     blog.pub_date = timezone.datetime.now()
     blog.save()
 
-    return redirect('/blog/' + str(blog.id))
+    return redirect('/qna/')

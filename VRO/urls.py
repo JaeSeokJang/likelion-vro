@@ -36,7 +36,7 @@ urlpatterns = [
     path('notice/<int:pk>/comment', homepage.views.comment_new, name="comment_new"),
     path('comment/<int:comment_id/remove', homepage.views.comment_remove, name="comment_remove"),
     path('qna/', homepage.views.qna, name="qna"),
-    path('homepage/<int:blog_id>/detail2', homepage.views.detail2, name='detail2'),
+    path('homepage/<int:qna_id>/detail2', homepage.views.detail2, name='detail2'),
     path('homepage/new/', homepage.views.new, name='new'),
     path('homepage/create/', homepage.views.create, name='create'),
 ]

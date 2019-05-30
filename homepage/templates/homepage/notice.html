@@ -2,9 +2,6 @@
 {% load staticfiles %}
 
 {% block content%}
-
-
-        
   
         <div class="container" style="top: 15px;">
                 <table class="table table-striped">
@@ -23,12 +20,10 @@
                         <tbody>
                             
                             <tr>
-                                
                                 <td><p style="color: black; font-size:17px;">{{ blog.title }}</p></td>
                                 <td><p style="color: black; font-size:17px;">{{ blog.summary }}<a href="{% url 'detail' blog.id %}">...more</p></td>
                                 <td><p style="color: black; font-size:17px;">홍용기</p></td>
                                 <td><p style="color: black; font-size:17px; width: 197px;">{{ blog.pub_date }}</p></td>
-                                
                             </tr>
                             
                         </tbody>
