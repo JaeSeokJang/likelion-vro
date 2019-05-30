@@ -21,7 +21,6 @@ def collection(request):
 def notice(request):
     notices = Notice.objects.all()
     return render(request, 'homepage/notice.html', {'notices':notices})
-
 def OUTER(request):
     return render(request, 'homepage/OUTER.html')
 def SHOES(request):
