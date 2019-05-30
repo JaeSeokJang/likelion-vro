@@ -1,14 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
-<<<<<<< HEAD
 from .models import Notice, Qna
 from django.contrib.auth.models import User
 from django.contrib import auth
 from django.utils import timezone
-=======
-from .models import Notice
-from django.contrib.auth.models import User
-from django.contrib import auth
->>>>>>> 1753cef0e53719b5b738bef26e773237dbcb3cee
 
 # Create your views here.
 
@@ -27,10 +21,7 @@ def collection(request):
 def notice(request):
     notices = Notice.objects.all()
     return render(request, 'homepage/notice.html', {'notices':notices})
-<<<<<<< HEAD
 
-=======
->>>>>>> 1753cef0e53719b5b738bef26e773237dbcb3cee
 def OUTER(request):
     return render(request, 'homepage/OUTER.html')
 def SHOES(request):
@@ -66,7 +57,6 @@ def signup(request):
 
 def logout(request):
     auth.logout(request)
-<<<<<<< HEAD
     return redirect('home')
 
 def detail(request, blog_id):
@@ -107,6 +97,3 @@ def create(request):
     blog.pub_date = timezone.datetime.now()
     blog.save()
     return redirect('/blog/' + str(blog.id))
-=======
-    return redirect('home')
->>>>>>> 1753cef0e53719b5b738bef26e773237dbcb3cee
